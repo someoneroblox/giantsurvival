@@ -1,0 +1,38 @@
+-- Made with love by someone from the Roblox Scripts Forum
+
+_G.w = 0.1  -- This is the value for the wait. You can change it to whatever you like.
+_G.farm = true  --Change this value to true to start the farm and false to stop the farm
+
+-- get money
+while true do  -- loops it
+if _G.farm == true then -- checks if _G.farm is true 
+local args = {
+    [1] = {
+        [1] = {
+            [1] = false
+        },
+        [2] = {
+            [1] = 2
+        }
+    }
+}
+
+workspace.__THINGS.__REMOTES.currencycollected:FireServer(unpack(args))
+end
+wait(w)
+end  
+
+-- Notes from developer
+-- This script is 99% ban proof because other people can't see your cash.
+-- This script is open sourced
+-- You can use parts of this script if you give me credit or you can make your own version.
+-- I AM NOT RESPONSIBLE IF YOU ARE BANNED.
+-- Enjoy and learn!
+
+-- Stuff used in this script
+-- _G is a global variable meaning you can change the value of it in other scripts.
+-- booleans are just true or false
+-- while loop is used to loop infinitely unless it is broken by a break
+-- args are arguments for the remote event
+-- FireServer is used to fire remotes
+-- A wait is used to delay for a set amount of time
